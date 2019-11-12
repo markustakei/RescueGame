@@ -5,24 +5,16 @@
  */
 function handlePoliceAnimation() {
   if (CONTROLS.police.forward) {
-    var radians = (Math.PI / 180) * POLICE_MAN.rotation,
-        cos = Math.cos(radians),
-        sin = Math.sin(radians);
-    POLICE_MAN.x += POLICE_MAN.speed * sin;
-    POLICE_MAN.y +=  POLICE_MAN.speed * cos;
+    POLICE_MAN.y -=  POLICE_MAN.speed;
   }
   if (CONTROLS.police.backward) {
-    var radians = (Math.PI / 180) * POLICE_MAN.rotation,
-        cos = Math.cos(radians),
-        sin = Math.sin(radians);
-    POLICE_MAN.x -= POLICE_MAN.speed * sin;
-    POLICE_MAN.y -=  POLICE_MAN.speed * cos;
+    POLICE_MAN.y +=  POLICE_MAN.speed;
   }
-  if (CONTROLS.police.rotateClockwise) {
-    POLICE_MAN.rotation -= 4;
+  if (CONTROLS.police.right {
+    POLICE_MAN.x +=  POLICE_MAN.speed;
   }
-  if (CONTROLS.police.rotateCounterClockwise) {
-    POLICE_MAN.rotation += 4;
+  if (CONTROLS.police.left) {
+    POLICE_MAN.y -=  POLICE_MAN.speed;
   }
 
   // Check if asteroid is leaving the boundary, if so, switch sides
